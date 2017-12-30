@@ -79,7 +79,8 @@ def main():
     else:
         f = open(args.dictionary, encoding=args.encoding, errors='surrogateescape')
         for line in f:
-            src, trg = line.split()
+            #src, trg = line.split()
+            src, trg = line.strip().split(" ||| ")
             try:
                 src_ind = src_word2ind[src]
                 trg_ind = trg_word2ind[trg]
