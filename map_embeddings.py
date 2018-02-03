@@ -88,6 +88,7 @@ def main():
                 trg_indices.append(trg_ind)
             except KeyError:
                 print('WARNING: OOV dictionary entry ({0} - {1})'.format(src, trg), file=sys.stderr)
+    print("Pairs used: %i" % len(src_indices))
 
     # Read validation dictionary
     if args.validation is not None:
